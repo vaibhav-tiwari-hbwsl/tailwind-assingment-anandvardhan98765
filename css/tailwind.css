@@ -1,0 +1,463 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  @apply box-border m-0 p-0;
+  font-family: "Inter", sans-serif;
+}
+.a {
+  @apply flex items-center mr-4;
+}
+#navbar {
+  @apply flex flex-col;
+  background: var(--pallate-blue-850, #0c304b);
+}
+#navbar {
+  @apply flex flex-col;
+  background: var(--pallate-blue-850, #0c304b);
+}
+#navbar__menu {
+  @apply flex items-center;
+}
+.navbar__search__div {
+  @apply flex items-center justify-center;
+}
+#navbar__search {
+  @apply flex w-[46.9375rem] items-start px-6 py-3.5 border-transparent;
+}
+.navbar__search__icon__div {
+  @apply inline-flex items-start gap-2 px-6 py-[0.72rem] border-transparent;
+  background: var(--pallate-white, #fff);
+}
+#navbar__search__icon {
+  @apply fill-white inline-flex items-start gap-2;
+}
+.navbar__menu__div {
+  @apply flex items-center flex-col ml-12;
+}
+.navbar__menu__title {
+  @apply text-[color:var(--pallate-white,#FFF)] text-center text-xs not-italic font-medium leading-4 w-[4.75rem] h-8 mt-1;
+}
+.navbar__lower {
+  @apply flex justify-between h-16 px-24 py-5;
+  background: var(--pallate-blue-900, #082032);
+}
+.two__item {
+  @apply flex flex-col w-[13.75rem] justify-center items-center border border-[color:var(--pallate-gray-300,#D4D4D8)] pt-5 pb-[2.125rem] px-6 border-solid;
+  background: var(--pallate-white, #fff);
+}
+.category {
+  @apply w-[8.125rem] h-[8.125rem] shrink-0;
+}
+.two__item__title {
+  @apply text-[color:var(--pallate-gray-800,#27272A)] text-center text-sm not-italic font-normal leading-5 mt-4;
+  font-family: Inter;
+}
+#two {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(13.75rem,1fr))] gap-10 mt-6;
+}
+#main__section {
+  @apply px-24 py-5;
+}
+#footer {
+  @apply flex flex-wrap flex-col h-[22.5rem] shrink-0;
+  background: var(--pallate-gray-100, #f4f4f5);
+}
+.footer__upper {
+  @apply flex justify-around mt-16;
+}
+.footer__upper__title {
+  @apply text-[color:var(--pallate-gray-700,#3F3F46)] text-sm not-italic font-semibold leading-5;
+  font-family: Inter;
+}
+.footer__list__item {
+  @apply text-[color:var(--pallate-gray-600,#52525B)] text-sm not-italic font-normal leading-5;
+  font-family: Inter;
+}
+.footer__list {
+  @apply mt-4;
+}
+.navbar__list__contact {
+  @apply flex ml-8;
+}
+.footer__list__contact {
+  @apply flex;
+
+  /* margin-left: 2.5rem; */
+}
+.footer__list__number {
+  @apply text-[color:var(--pallate-gray-600,#52525B)] text-sm not-italic font-semibold leading-5;
+  font-family: Inter;
+}
+ul > li {
+  @apply list-none;
+}
+.footer__socials {
+  @apply flex gap-4 mt-4;
+}
+.footer__copyright {
+  @apply relative text-[color:var(--pallate-gray-500,#71717A)] text-center text-xs not-italic font-normal leading-4 p-8 top-2;
+  font-family: Inter;
+}
+hr {
+  @apply w-[90%] h-px m-auto;
+  background: #e4e4e7;
+}
+.footer__subscribe {
+  @apply inline-flex justify-center items-center text-[color:var(--pallate-white,#FFF)] text-sm not-italic font-semibold leading-5 mt-[1.62rem] px-5 py-3 border-[none];
+  background: var(--pallate-blue-700, #196195);
+  font-family: Inter;
+}
+#navbar__upper {
+  @apply flex flex-wrap justify-between items-center px-24 py-5;
+}
+.navbar__lower__p {
+  @apply text-[color:var(--pallate-white,#FFF)] text-base not-italic font-normal leading-6 ml-2;
+  font-family: Inter;
+}
+.navbar__lower__one {
+  @apply flex;
+}
+.navbar__lower__two {
+  @apply flex;
+}
+.footer__input {
+  @apply flex w-[20.5625rem] h-11 items-center shrink-0 border border-[color:var(--pallate-blue-300,#7FC7FB)] pl-4 pr-[11.1875rem] py-3 border-solid;
+  background: var(--pallate-white, #fff);
+}
+#one {
+  @apply flex justify-between items-center;
+}
+.one__view__div {
+  @apply flex items-center;
+}
+.one__title {
+  @apply text-[color:var(--pallate-gray-800,#27272A)] text-xl not-italic font-semibold leading-7;
+  font-family: Inter;
+}
+.one__view {
+  @apply text-[color:var(--pallate-blue-700,#196195)] not-italic font-bold leading-5 mr-2;
+  font-family: Inter;
+}
+.main__one {
+  @apply flex justify-between px-24 py-3.5;
+}
+.main__item__img {
+  @apply relative;
+}
+#hamburger {
+  @apply hidden;
+}
+.main__item__heading {
+  @apply relative top-[-8.25rem] text-[color:var(--pallate-white,#FFF)] text-xl not-italic font-bold leading-7 ml-4;
+  font-family: Inter;
+}
+.main__item__p {
+  @apply relative top-[-8.25rem] text-[color:var(--pallate-white,#FFF)] text-sm not-italic font-normal leading-5 ml-4;
+  font-family: Inter;
+
+  /* padding-right: 2rem; */
+}
+.main__item__arrow {
+  @apply relative top-[-8.25rem] text-[color:var(--pallate-white,#FFF)] text-sm not-italic font-normal leading-5 ml-4;
+  font-family: Inter;
+
+  /* padding-right: 2rem; */
+}
+.main__item__view {
+  @apply relative top-[-6rem] text-[color:var(--pallate-white,#FFF)] text-sm not-italic font-normal leading-5 ml-4;
+  font-family: Inter;
+}
+
+/* .image{
+    position: absolute;
+    
+} */
+.card__section {
+  @apply relative flex justify-between px-24 py-3.5;
+}
+.image {
+  @apply w-[31rem] h-[15.5625rem];
+}
+.card__section__card {
+  @apply relative;
+
+  /* margin-right:30rem; */
+}
+.heading {
+  @apply absolute text-[color:var(--pallate-white,#FFF)] text-xl not-italic font-bold leading-7 pl-4 top-[8.25rem];
+
+  /* leading-7/font-bold */
+  font-family: Inter;
+
+  /* 140% */
+}
+.text {
+  @apply absolute text-[color:var(--pallate-white,#FFF)] w-3/5 text-sm not-italic font-normal leading-5 pl-4 top-[10.25rem];
+
+  /* leading-5/font-normal */
+  font-family: Inter;
+
+  /* 142.857% */
+}
+.btn {
+  @apply flex absolute text-[color:var(--pallate-white,#FFF)] text-xs not-italic font-semibold leading-4 pl-4 bottom-4;
+  font-family: Inter;
+}
+@media screen and (max-width: 600px) {
+  #navbar__upper {
+    @apply p-5;
+  }
+  #footer {
+    @apply block h-[22.5rem] relative h-auto;
+  }
+  .footer__upper {
+    @apply flex-wrap block p-8;
+  }
+  .footer__section {
+    @apply mt-4 m-8 p-0;
+  }
+  .footer__input {
+    @apply w-[70vw] p-2;
+  }
+  .navbar__search__div {
+    @apply hidden w-20;
+  }
+  .navbar__menu__div {
+    @apply ml-0 w-full flex flex-row items-center justify-center m-[15px];
+  }
+  #navbar__search {
+    @apply w-20;
+  }
+  .main__one {
+    @apply block mt-4 p-0;
+  }
+  .main__item__img {
+    @apply w-[90vw] m-auto;
+  }
+  #navbar__menu {
+    @apply relative w-screen h-[30vh] flex flex-col justify-center items-center hidden;
+
+    /* visibility: hidden; */
+  }
+  .navbar__menu__title {
+    @apply ml-2.5;
+  }
+  .navbar__lower {
+    @apply block p-8 block h-20 p-8 h-fit;
+  }
+  #hamburger {
+    @apply flex w-8 h-8;
+  }
+  .navbar__upper__menubar {
+    @apply w-full flex items-center justify-between;
+  }
+  #main__section {
+    @apply p-8;
+  }
+  #two {
+    @apply place-items-center grid-cols-[repeat(auto-fit,minmax(13.75rem,1fr))];
+  }
+  .one__title {
+    @apply text-[0.8rem];
+  }
+  .one__view {
+    @apply text-[0.8rem] m-0;
+  }
+  .navbar__lower__one {
+    @apply w-full justify-between;
+  }
+  .navbar__lower__two {
+    @apply w-full justify-between mt-2;
+  }
+  .navbar__lower {
+    /* height:5.5rem; */
+  }
+  .navbar__lower__p {
+    @apply text-[0.7rem];
+  }
+  .navbar__list__contact {
+    @apply m-0;
+  }
+  .card__section {
+    @apply block p-8;
+  }
+  .image {
+    @apply w-[85vw];
+  }
+  .heading {
+    @apply text-base;
+  }
+  .text {
+    @apply text-[0.65rem] w-[60vw];
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  #hamburger {
+    @apply flex w-8 h-8;
+  }
+  .navbar__upper__menubar {
+    @apply w-full flex justify-between;
+  }
+  .navbar__search__div {
+    @apply mt-4 w-[90vw];
+  }
+  #footer {
+    @apply block h-auto;
+
+    /* height: 22.5rem; */
+  }
+  .footer__upper {
+    @apply flex-wrap p-8;
+  }
+  .footer__section {
+    @apply m-4;
+  }
+  #navbar__upper {
+    @apply m-0 p-8;
+  }
+  #navbar__menu {
+    @apply relative w-screen h-[40vh] flex flex-col justify-center items-center hidden;
+  }
+  .navbar__lower {
+    @apply h-fit block p-8;
+
+    /* font-size:0.3rem; */
+  }
+  .navbar__lower__one {
+    @apply justify-between;
+  }
+  .navbar__lower__two {
+    @apply justify-between;
+  }
+  .navbar__list__contact {
+    @apply m-0;
+  }
+  .navbar__menu__div {
+    @apply mx-0 my-[15px];
+  }
+  .navbar__lower__p {
+    @apply text-base;
+  }
+  .card__section {
+    @apply flex flex-col justify-center items-center p-8;
+  }
+  #main__section {
+    @apply px-14 py-5;
+  }
+  .image {
+    @apply w-[85vw];
+  }
+  .heading {
+    @apply text-[1.3rem];
+  }
+  .text {
+    @apply text-[0.8rem] w-[60vw];
+  }
+  #two {
+    @apply place-items-center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #footer {
+    @apply block h-auto;
+  }
+  .footer__upper {
+    @apply flex-wrap block grid grid-cols-[25%_25%_25%] p-8;
+  }
+  .footer__section {
+    @apply mt-4 m-8;
+  }
+  .footer__input {
+    @apply w-[50vw] p-2;
+  }
+  #hamburger {
+    @apply flex w-8 h-8;
+  }
+  .navbar__upper__menubar {
+    @apply w-full flex justify-between;
+  }
+  .navbar__search__div {
+    @apply mt-4 w-[90vw];
+  }
+  .card__section {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] px-8 py-3.5;
+  }
+  .image {
+    @apply w-80;
+  }
+  #main__section {
+    @apply px-8 py-3.5;
+  }
+  #navbar__upper {
+    @apply m-0 p-8;
+  }
+  #navbar__menu {
+    @apply relative w-screen h-[35vh] flex flex-col justify-center items-center hidden;
+  }
+  .navbar__menu__div {
+    @apply mx-0 my-2.5;
+  }
+  .navbar__lower {
+    @apply h-fit block p-8 h-fit block p-8;
+  }
+  .navbar__lower__one {
+    @apply justify-between;
+  }
+  .navbar__lower__two {
+    @apply justify-between;
+  }
+  .navbar__list__contact {
+    @apply m-0;
+  }
+  .navbar__lower__p {
+    @apply text-base;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #navbar__upper {
+    @apply px-8 py-3.5;
+  }
+  #navbar__menu {
+    @apply items-center flex justify-between;
+  }
+  .card__section {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(25rem,1fr))] px-8 py-3.5;
+  }
+  .image {
+    @apply w-[25rem];
+  }
+  #navbar__search {
+    @apply w-56;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  #navbar__search {
+    @apply w-64;
+  }
+  .card__section {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(25rem,1fr))];
+  }
+  .image {
+    @apply w-[30rem];
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #navbar__search {
+    @apply w-[35rem];
+  }
+}
